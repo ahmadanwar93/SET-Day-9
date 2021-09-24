@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Music Player</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="./task1_style.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <div class="upper-section" id="upper-section-container">
+                <audio src="./audio/cali-1171.mp3" autoplay   id="audioSelected"></audio>
+                <div class="play-bar">
+                    <div class="play-bar-first-row">
+                        <h1 id="song-play-bar-title">Cali-1171</h1>
+                    </div>
+                    <div class="play-bar-second-row">
+                        <p class="song-playlist" id="song-play-bar-album">Album1</p>
+                        <div class="play-media-bar">
+                            <i class="fas fa-angle-double-left" id="previous-track" onclick="previousSong()"></i>
+                            <div id="play-pause-button-container" onclick="playPause()">
+                                <i class="fas fa-play" id="play-pause-button" ></i>
+                            </div>
+                            
+                            <i class="fas fa-redo" id="repeat-btn" onclick="repeatSong()"></i>
+                            <i class="fas fa-angle-double-right" id="next-track" onclick="nextSong()"></i>
+                            <i class="fas fa-heart" onclick="favoriteSong()" id="heart-button"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-section">
+                <div class="playlist-container">
+                    <div class="song">
+                        <p>1</p>
+                        <img src="./images/image1.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">Cali-1171</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album1
+                                </p>
+                                <p class="song-playlist-year">Year1</p>
+                            </div>
+                            
+                        </div>
+                    </div> 
+                    <div class="song" onclick="selectSongPlaylist(2)">
+                        <p>2</p>
+                        <img src="./images/image2.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">Freedom-inspired-cinematic</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album2
+                                </p>
+                                <p class="song-playlist-year">Year2</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="song" onclick="selectSongPlaylist(3)">
+                        <p>3</p>
+                        <img src="./images/image3.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">My-life-main-6670</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album3
+                                </p>
+                                <p class="song-playlist-year">Year3</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="song" onclick="selectSongPlaylist(4)">
+                        <p>4</p>
+                        <img src="./images/image4.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">Triumphant-long-6673</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album4
+                                </p>
+                                <p class="song-playlist-year">Year4</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="song" onclick="selectSongPlaylist(5)">
+                        <p>5</p>
+                        <img src="./images/image15.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">Cinematic-chillhop-main</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album5
+                                </p>
+                                <p class="song-playlist-year">Year5</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="song" onclick="selectSongPlaylist(6)">
+                        <p>6</p>
+                        <img src="./images/image16.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">In-the-forest-ambient-acoustic-guitar</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album6
+                                </p>
+                                <p class="song-playlist-year">Year6</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="song" onclick="selectSongPlaylist(7)">
+                        <p>7</p>
+                        <img src="./images/image7.jpg">
+                        <div class="song-playlist-info">
+                            <h3 class="song-playlist-title">Battle-of-the-dragons-8037</h3>
+                            <div class="song-playlist-album-year-container">
+                                <p class="song-playlist-album">
+                                    Album7
+                                </p>
+                                <p class="song-playlist-year">Year7</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <!-- <div class="show-more-btn">
+                        <p>More Songs</p>
+                    </div> -->
+                </div>
+
+                <div class="song-playlist-info">
+                    <p>This is the description of the playlist. Lorem ipsum dolor sit amet, consectetur </p>
+                    <p>Created by Gilbert U. | 147 songs 7 hours 4 mins.</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+        <script src="./task1_script.js"></script>
+    </body>
+
+</html>
